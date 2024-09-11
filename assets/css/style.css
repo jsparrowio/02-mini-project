@@ -1,0 +1,142 @@
+:root {
+    --bgcolor: #10204b;
+    --mainfontcolor: #df15e6;
+    --secondaryfontcolor: #FFF;
+    --gradienttop: #911195;
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+*::selection {
+    background-color: #33cdbb;
+    color: #e69d15;
+}
+
+body {
+    background-color: var(--bgcolor);   
+}
+
+header {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+main {
+    display: flex;
+    width: 96%;
+    margin: 2rem auto;
+}
+
+footer {
+    text-align: center;
+}
+
+h1 {
+    color: var(--mainfontcolor);
+    font-size: 300%;
+}
+
+h2 {
+    color: var(--mainfontcolor);
+    font-size: 200%;
+}
+
+p {
+    color: var(--secondaryfontcolor);
+    text-align: center;
+    font-size: 110%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+.justify-center {
+    justify-content: center;
+  }
+
+.cheatsheet-container-column {
+    flex: 1 0 100%;
+    padding: 1rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+.cheatsheet-container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 1rem;
+    outline: 2px dashed white;
+    transition: all 0.5s ease-in-out;
+}
+
+.cheatsheet-container-main:hover,
+.cheatsheet-container-main:hover .cheatsheet-container-heading{
+    box-shadow: 0px 0px 18px var(--mainfontcolor), inset 0px 0px 4px var(--mainfontcolor);
+}
+
+.cheatsheet-container-main .cheatsheet-container-heading {
+    position: relative;
+    margin: -3rem 0 0.75rem 0;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 1em;
+    background-color: var(--bgcolor);
+    color: var(--mainfontcolor);
+    transition: all 0.5s ease-in-out;
+}
+
+.cheatsheet-container-content {
+    color: var(--mainfontcolor);
+    font-size: 110%;
+}
+
+.cheatsheet-container-main .code-area {
+    flex-grow: 1;
+}
+
+.cheatsheet-container-main pre {
+    padding: 1rem;
+    border-radius: 1em;
+    tab-size: 4;
+    background: linear-gradient(var(--gradienttop), var(--mainfontcolor));
+    color: var(--secondaryfontcolor);
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+}
+
+.cheatsheet-container-main pre:active {
+    user-select: all;
+  }
+
+@media screen and (min-width: 768px) {
+    .cheatsheet-container-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .cheatsheet-container-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }

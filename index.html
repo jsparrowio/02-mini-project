@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./assets/css/normalize.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <title>CSS Snippet Cheatsheet</title>
+</head>
+<body>
+    <header>
+        <section>
+            <h1 >CSS Snippet Cheatsheet</h1>
+            <p>Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all of the code for you to copy.</p>
+        </section>
+    </header>
+    <main>
+        <section class ="row justify-center">
+            <div class="cheatsheet-container-column">
+                <figure class="cheatsheet-container-main">
+                    <div class="cheatsheet-container-heading"><h2>Flexbox Row</h2></div>
+                    <div class="cheatsheet-container-content">Use these three properties to create a Flexbox row layout</div>
+                        <pre class="code-area"><code>.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+} </code></pre>
+                </figure>
+            </div>
+            <div class="cheatsheet-container-column">
+                <figure class="cheatsheet-container-main">
+                    <div class="cheatsheet-container-heading"><h2>Flexbox Column</h2></div>
+                    <div class="cheatsheet-container-content">Use this to create a flexbox column layout</div>
+                        <pre class="code-area"><code>.column {
+  display: flex;
+  flex-direction: column
+}</code></pre>
+                </figure>
+            </div>
+            <div class="cheatsheet-container-column">
+                <figure class="cheatsheet-container-main">
+                    <div class="cheatsheet-container-heading"><h2>CSS Grid Layout</h2></div>
+                    <div class="cheatsheet-container-content">Build a 12-column layout using CSS Gradients</div>
+                        <pre class="code-area"><code>.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12, 1fr);
+}</code></pre>
+                </figure>
+            </div>
+            <div class="cheatsheet-container-column">
+                <figure class="cheatsheet-container-main">
+                    <div class="cheatsheet-container-heading"><h2>Linear Gradients</h2></div>
+                    <div class="cheatsheet-container-content">This will create a background linear gradient from top to bottom</div>
+                        <pre class="code-area"><code>.linear-gradient-background {
+  background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+}</code></pre>
+                </figure>
+            </div>
+            <div class="cheatsheet-container-column">
+                <figure class="cheatsheet-container-main">
+                    <div class="cheatsheet-container-heading"><h2>Box Transition Glow</h2></div>
+                    <div class="cheatsheet-container-content">Use transition and box shadows to glow on hover</div>
+                        <pre class="code-area"><code>.code-card .card-header {
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.code-card:hover,
+.code-card:hover .card-header {
+  box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}</code></pre>
+                </figure>
+            </div>
+            <div class="cheatsheet-container-column">
+                <figure class="cheatsheet-container-main">
+                    <div class="cheatsheet-container-heading"><h2>Overlay Card and Title</h2></div>
+                    <div class="cheatsheet-container-content">Use position properties and negative margins to raise elements higher than their natural starting point</div>
+                        <pre class="code-area"><code>.card-header {
+  position: relative;
+  margin-top: -20px;
+} </code></pre>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h2>Made with ❤️ and CSS</h2>
+        </section>
+    </footer>
+</body>
+</html>
